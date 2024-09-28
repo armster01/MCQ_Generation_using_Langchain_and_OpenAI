@@ -31,10 +31,10 @@ providing an easy-to-use interface for educators and content creators to quickly
    export OPENAI_API_KEY='your-api-key'
 4. Run the Streamlit app:->
    streamlit run Streamlit_App.py
-##Usage:
+## Usage:
 Once the Streamlit app is running, input a topic or text, and the system will generate MCQs based on your input. 
 The questions generated will vary in difficulty, offering a range of choices to suit different learning levels.
 
-##Important Note:
+## Important Note:
 This project requires an OpenAI API key for token generation, which may incur costs based on usage. 
 Ensure you have sufficient credits or a subscription plan on the OpenAI platform.
