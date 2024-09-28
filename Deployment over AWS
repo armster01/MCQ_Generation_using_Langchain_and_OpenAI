@@ -1,0 +1,63 @@
+Overview
+This project automates the creation of Multiple Choice Questions (MCQs) using Langchain and OpenAI. 
+It provides an easy-to-use interface deployed via Streamlit, enabling users to input custom text and generate high-quality MCQs. 
+This README outlines the steps to deploy the project on an AWS EC2 Ubuntu Machine.
+
+Prerequisites
+Before starting, make sure you have:
+An AWS account with access to the EC2 console.
+OpenAI API key with sufficient credits.
+GitHub repository containing your project code.
+
+Deployment on AWS EC2
+
+Step 1: Launch an EC2 Ubuntu Instance
+Log in to AWS Console.
+Navigate to EC2 (Elastic Compute Cloud) and click Launch Instance.
+Select Ubuntu Server 22.04 LTS as the machine image.
+Choose an appropriate instance type (e.g., t2.micro for testing purposes).
+Configure security groups to allow SSH and HTTP/HTTPS access.
+Click Launch and connect to the instance using SSH.
+
+Step 2: Connect to the EC2 Instance
+Connect to the instance from your local machine using SSH:
+  ssh -i your-key.pem ubuntu@your-ec2-public-ip
+
+Step 3: Update the Ubuntu Machine
+Once connected, update the packages on the machine:
+  sudo apt update
+  sudo apt-get update
+  sudo apt upgrade -y
+
+Step 4: Install Required Packages
+Install necessary packages for running the application:
+  sudo apt install git curl unzip tar make sudo vim wget -y
+
+Step 5: Clone the GitHub Repository
+Clone your project repository into the EC2 instance:
+  git clone https://github.com/your-username/your-repository.git
+  cd your-repository
+
+Step 6: Install Python and Required Libraries
+Install Python3-pip and project dependencies:
+  sudo apt install python3-pip -y
+  pip3 install -r requirements.txt
+
+Step 7: Run the Streamlit App
+Start the Streamlit application:
+  python3 -m streamlit run StreamlitAPP.py
+
+
+
+Your app will now be running and accessible at http://your-ec2-public-ip:8501.
+
+
+Final Deployment Notes
+Ensure your security groups allow inbound traffic on port 8501 for the Streamlit app.
+Use nohup or screen if you want the app to continue running after closing the SSH session:
+  nohup python3 -m streamlit run StreamlitAPP.py &
+
+
+Conclusion
+By following these steps, you can successfully deploy the MCQ Generation project on an AWS EC2 Ubuntu instance. 
+This guide outlines everything from instance configuration to running the application.
