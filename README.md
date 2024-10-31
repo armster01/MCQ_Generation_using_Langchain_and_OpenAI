@@ -14,7 +14,7 @@ providing an easy-to-use interface for educators and content creators to quickly
 ## Deployment:
 1. The project runs on Streamlit, and you can start the app with the following command:
 2. streamlit run Streamlit_App.py
-## Please note, this application requires OpenAI API access, and charges will be incurred for token usage on the OpenAI platform during question generation.
+## Please note, this application requires OpenAI API access, and charges will be imposed for token usage on the OpenAI platform during question generation.
 
 ## Prerequisites:
 1. Python 3.x
