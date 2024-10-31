@@ -70,7 +70,7 @@ if button and uploaded_file is not None and mcq_count and subject and tone:
             df.index=df.index+1
             st.table(df)
             #Display the review in a text box as well
-            st.text_area(label="Review",value=response["review'])
+            st.text_area(label="Review",value=response["review"])
           else:
             st.error("Error in the table data")
          else:
