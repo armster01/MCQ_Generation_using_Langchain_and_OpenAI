@@ -60,7 +60,7 @@ if button and uploaded_file is not None and mcq_count and subject and tone:
       print(f"Completion Tokens:{cb.completion_tokens}")
       print(f"Total Cost:{cb.total_cost}")
 
-      if.isinstance(response, dict):
+      if isinstance(response, dict):
         #Extract the quiz from the response
         quiz=response.get("quiz",None)
         if quiz is not None:
@@ -75,5 +75,3 @@ if button and uploaded_file is not None and mcq_count and subject and tone:
             st.error("Error in the table data")
          else:
             st.write(response)
-                         
-            
