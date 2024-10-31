@@ -73,5 +73,5 @@ if button and uploaded_file is not None and mcq_count and subject and tone:
             st.text_area(label="Review",value=response["review"])
           else:
             st.error("Error in the table data")
-         else:
+        else:
             st.write(response)
